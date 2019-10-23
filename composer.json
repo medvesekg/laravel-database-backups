@@ -1,0 +1,32 @@
+{
+    "name": "medvesekg/laravel-database-backups",
+    "description": "Database backups for Laravel",
+    "authors": [
+        {
+            "name": "Gregor Medvesek",
+            "email": "medvesek.gregor@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Medvesekg\\DatabaseBackups\\": "src/"
+        }
+    },
+
+    "require": {
+        "laravel/framework": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3",
+        "mockery/mockery": "^1.2"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Medvesekg\\DatabaseBackups\\DatabaseBackupsServiceProvider"
+            ]
+        }
+    }
+}
