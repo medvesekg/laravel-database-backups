@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Medvesekg\DatabaseBackups\Commands\DatabaseBackupCommand;
-use Medvesekg\DatabaseBackups\Commands\CleanOldDAtabaseBackupsCommand;
+use Medvesekg\DatabaseBackups\Commands\CleanOldDatabaseBackupsCommand;
 use Medvesekg\DatabaseBackups\Jobs\DatabaseBackupJob;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Contracts\Filesystem\Factory as Filesystem;
