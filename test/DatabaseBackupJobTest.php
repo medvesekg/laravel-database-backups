@@ -25,7 +25,7 @@ class DatabaseBackupJobTest extends TestCase
         $this->artisan->shouldReceive('call')->once()->with('db:backup');
         $this->artisan->shouldReceive('call')->once()->with('db:backup:clean');
 
-        $this->job->handle();
+        $this->job->handle($this->artisan);
     }
 
 }
