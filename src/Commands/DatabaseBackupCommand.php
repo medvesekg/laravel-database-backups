@@ -114,6 +114,7 @@ class DatabaseBackupCommand extends Command
         }
  
         $this->process->setCommandLine($command);
+        $this->process->setWorkingDirectory(base_path());
         $this->process->run(null, $env);
         
         if(!$this->process->isSuccessful()) {
@@ -121,9 +122,9 @@ class DatabaseBackupCommand extends Command
         }
 
         
-        $this->storage->disk($disk)->put($filename, fopen($filename, 'r'));
+        $this->storage->disk($disk)->put($filename, fopen(base_path($filename), 'r'));
 
-        unlink($filename);
+        unlink(base_path($filename));
 
         $this->info("Created backup");
     }

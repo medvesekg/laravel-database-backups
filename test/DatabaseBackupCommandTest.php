@@ -14,6 +14,9 @@ function fopen($path) {
 function unlink($path) {
     return;
 }
+function base_path($path=null) {
+    return;
+}
 
 class DatabaseBackupCommandTest extends TestCase
 {
